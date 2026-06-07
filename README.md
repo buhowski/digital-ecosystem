@@ -1,19 +1,19 @@
-# Site Navigation
+# Navigation
 
 ## Frontend Developer, UI/UX Engineer
 
 - [Portfolio](https://buhowski.dev/portfolio)
 - [CV](https://buhowski.dev/cv)
 
-## Ecosystem
+## Counterculture Media
 
-Architected a counterculture media ecosystem. Market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
-
-- [Product Vision: Another Dimension](https://buhowski.dev/vision)
-
-## Vectors
+Architected a digital ecosystem — market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
 
 Needed: accomplices, partners, and investors.
+
+- [Product Vision](https://buhowski.dev/vision)
+
+### Vectors
 
 If you have the drive or know how to scale this — reach out.
 
