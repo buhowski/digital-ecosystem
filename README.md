@@ -5,9 +5,9 @@
 - [Portfolio](https://buhowski.dev/portfolio)
 - [CV](https://buhowski.dev/cv)
 
-## Counterculture Media
+## Media Ecosystem
 
-Architected a digital ecosystem — market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
+Market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
 
 Needed: accomplices, partners, and investors.
 
