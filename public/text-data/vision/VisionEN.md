@@ -6,7 +6,7 @@
 
 Architected an autonomous ecosystem integrating countercultural media, an entertainment magazine, filmmaking, gamedev, and tech.
 
-Launch-ready concepts and a market colonization strategy for each vector.
+Market colonization strategy and launch-ready concepts — for each vector.
 
 Needed: accomplices, partners, and investors.
 
