@@ -77,6 +77,15 @@
 	font-size: 23px;
 	letter-spacing: 4px;
 	font-family: $LouisGeorgeCafBold;
+
+	span {
+		display: block;
+		transition: transform $transition-l;
+	}
+
+	&:active span {
+		transform: scale(0.86);
+	}
 }
 
 .mobile-menu-btn,

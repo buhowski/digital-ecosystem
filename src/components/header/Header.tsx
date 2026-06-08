@@ -62,7 +62,7 @@ const Header = () => {
 		return (
 			<li className='nav-item' key={i}>
 				<NavLink className={`nav-link ${activeClass}`} to={`${pageLink}`}>
-					{pageName}
+					<span>{pageName}</span>
 				</NavLink>
 			</li>
 		);
