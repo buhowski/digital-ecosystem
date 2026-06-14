@@ -12,7 +12,7 @@
 }
 
 // loader spinner time
-$spinTime: 0.9s;
+$spinTime: 0.6s;
 
 .preloader {
 	position: fixed;
@@ -31,6 +31,7 @@ $spinTime: 0.9s;
 		height: 60px;
 		flex-shrink: 0;
 
+		// .preloader__spinner-span
 		&-span {
 			animation: loaderSpinner $spinTime infinite ease-in-out both;
 			width: 100%;
@@ -39,21 +40,17 @@ $spinTime: 0.9s;
 			left: 0;
 			top: 0;
 
+			// Dynamically set spans based on totalSpans variable
+			transform: rotate(calc(var(--index) * (360deg / var(--preloader-spans))));
+			animation-delay: calc(-#{$spinTime} + var(--index) * (#{$spinTime} / var(--preloader-spans)));
+
 			&:before {
 				content: ' ';
 				display: block;
 				margin: 0 auto;
-				width: 2px;
+				width: 1px;
 				height: 16px;
-				border-radius: 20px;
 				background-color: $light-color;
-			}
-
-			@for $i from 1 through 12 {
-				&:nth-child(#{$i}) {
-					transform: rotate(($i - 1) * 30deg);
-					animation-delay: calc(-#{$spinTime} + ($i - 1) * ($spinTime / 12));
-				}
 			}
 		}
 	}
