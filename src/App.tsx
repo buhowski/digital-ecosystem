@@ -120,7 +120,7 @@ const App = () => {
 		<>
 			{/* PRELOADER */}
 			{!disablePreloader && showPreloader && <Preloader />}
-			<Preloader />
+
 			<div className='application'>
 				{/* Navigation */}
 				<div ref={navRef} className={`application__nav ${isStartupNavActive ? 'nav-active' : ''}`}>
