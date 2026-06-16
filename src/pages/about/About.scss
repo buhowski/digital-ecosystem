@@ -54,7 +54,7 @@
 		font-size: 18px;
 		letter-spacing: 2px;
 		line-height: normal;
-		width: 61%;
+		width: 64%;
 		text-align: center;
 		font-weight: 600;
 		text-shadow: 0 1px 6px rgba(#000000, 0.35);
@@ -226,11 +226,8 @@
 			width: 46%;
 
 			@include mobile {
-				left: unset;
-				bottom: 28%;
-				right: -5%;
-				width: 150px;
-				transform: rotate(10deg);
+				left: -3%;
+				bottom: 61%;
 			}
 		}
 	}

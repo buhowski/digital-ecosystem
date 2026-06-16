@@ -15,8 +15,8 @@ const dotsData = [
 	},
 	{
 		classItem: 'keyboard',
-		titleSub: 'Tech:',
-		title: 'React, TypeScript, Node.js, HTML5, CSS3, SCSS, WordPress',
+		titleSub: 'Core:',
+		title: 'React, TypeScript, Next.js, Node.js, HTML5, CSS3, SCSS, JavaScript',
 		img: keyboardIcon,
 	},
 	{
