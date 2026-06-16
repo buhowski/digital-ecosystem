@@ -1,6 +1,6 @@
 # Navigation
 
-## Frontend Developer, UI/UX Engineer
+## Frontend Developer
 
 - [Portfolio](https://buhowski.dev/portfolio)
 - [CV](https://buhowski.dev/cv)
@@ -17,12 +17,12 @@ Needed: accomplices, partners, and investors.
 
 Developed a market colonization strategy and launch-ready concepts for each direction.
 
-- [Magazine (Strategy & MVP)](https://buhowski.dev/mvp)
-- [Presentation Tools (Video Shows & Experiments)](https://buhowski.dev/pilots)
-- [Cinema](https://buhowski.dev/cinema)
-- [Gamedev](https://buhowski.dev/gamedev)
-
 If you have the drive or know how to scale this — reach out.
+
+- [Magazine: Strategy & MVP](https://buhowski.dev/mvp)
+- [Presentation Tools: Video Shows & Experiments](https://buhowski.dev/pilots)
+- [Cinema Development](https://buhowski.dev/cinema)
+- [Gamedev Dimension](https://buhowski.dev/gamedev)
 
 <!-- ## Collab
 
