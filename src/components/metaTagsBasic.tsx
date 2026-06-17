@@ -16,7 +16,7 @@ const defaultDescription =
 const aboutDescription =
 	'A creator at the crossroads of code, storytelling, design, and vision-shaping experiences.';
 const portfolioDescription =
-	'Dive into a collection of projects that combine creativity, functionality, and quality web design.';
+	'Dive into a collection of projects combining creativity, functionality, high performance, and quality responsive web design.';
 
 // Social Preview Screenshots
 // const homeScreen = `${website}/screenshot_home.png`
