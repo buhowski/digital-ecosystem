@@ -1,6 +1,6 @@
 # Navigation
 
-## Frontend Developer
+## Frontend Developer • UI/UX
 
 - [Portfolio](https://buhowski.dev/portfolio)
 - [CV](https://buhowski.dev/cv)
