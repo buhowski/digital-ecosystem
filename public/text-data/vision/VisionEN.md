@@ -4,11 +4,11 @@
 
 ## Preface
 
-Architected an autonomous ecosystem integrating countercultural media, an entertainment magazine, filmmaking, gamedev, and tech.
+Architected an autonomous ecosystem that unites media, a magazine, filmmaking, gamedev, and technology.
 
 Developed a market colonization strategy and launch-ready concepts for each direction.
 
-Needed: accomplices, partners, and investors.
+Needed: accomplices, partners, and investors. If you know how to improve and launch this — reach out.
 
 Project details — in navigation. Corporation plan — below.
 
