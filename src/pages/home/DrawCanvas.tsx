@@ -11,8 +11,8 @@ interface TrailPoint {
 }
 
 const MIN_DIST_SQ = 4; // MIN_DIST = 2px, squared for cheap distance check
-const POINT_LIFETIME = 600;
-const BRUSH_SIZE = 130; // brush diameter in px
+const POINT_LIFETIME = 900;
+const BRUSH_SIZE = 135; // brush diameter in px
 const BRUSH_RADIUS = BRUSH_SIZE / 2;
 const FILL_DENSITY = 0.1; // smaller = smoother trail (default = 0.5)
 const FADE_CURVE = 1; // trail fade curve — 1 = linear, 2 = smooth, 3+ = sharp
@@ -196,7 +196,7 @@ export default function DrawCanvas() {
 					ref={illustrationRef}
 					className='illustrationImage'
 					src={illustrationImage}
-					alt='Hand-drawn digital portrait illustration of Tsiomakh Olexander (Цьомах Олександр Віталійович), Frontend Developer, Writer, Screenwriter'
+					alt='Hand-drawn digital portrait illustration of Buhowski — Olexander Tsiomakh (Цьомах Олександр Віталійович), Frontend Developer, Storyteller, Narrative Designer.'
 				/>
 			</div>
 		</div>
