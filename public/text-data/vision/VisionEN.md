@@ -8,7 +8,7 @@ Architected an autonomous ecosystem that unites media, a magazine, filmmaking, g
 
 Developed a market colonization strategy and launch-ready concepts for each direction.
 
-Needed: accomplices, partners, and investors. If you know how to improve and launch this — reach out.
+Needed: accomplices, partners, and investors.
 
 Project details — in navigation. Corporation plan — below.
 
