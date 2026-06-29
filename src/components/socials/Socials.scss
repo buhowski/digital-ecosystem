@@ -1,5 +1,7 @@
 @import '../../styles/variables.scss';
 
+$social-size: 58px;
+
 .contact-menu {
 	display: flex;
 
@@ -10,8 +12,8 @@
 		justify-content: center;
 		flex-shrink: 0;
 		margin-right: 30px;
-		width: 60px;
-		height: 60px;
+		width: $social-size;
+		height: $social-size;
 		border-radius: 50%;
 		position: relative;
 		background-color: $bg-darker;
