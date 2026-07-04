@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import photoImage from '../../assets/home/origin.png';
 import illustrationImage from '../../assets/home/drawing.png';
@@ -19,6 +19,7 @@ const FADE_CURVE = 1; // trail fade curve — 1 = linear, 2 = smooth, 3+ = sharp
 
 // brush canvas over image
 export default function DrawCanvas() {
+	const [illustrationSrc, setIllustrationSrc] = useState<string>('');
 	const containerRef = useRef<HTMLDivElement>(null);
 	const canvasWrapperRef = useRef<HTMLDivElement>(null);
 	const illustrationRef = useRef<HTMLImageElement>(null);
@@ -185,6 +186,16 @@ export default function DrawCanvas() {
 		};
 	}, []);
 
+	useEffect(() => {
+		const bg = new Image();
+		bg.onload = () => setIllustrationSrc(illustrationImage);
+		bg.src = photoImage;
+
+		if (bg.complete) {
+			setIllustrationSrc(illustrationImage);
+		}
+	}, []);
+
 	return (
 		<div ref={containerRef} className='photoContainer'>
 			<div
@@ -195,7 +206,7 @@ export default function DrawCanvas() {
 				<img
 					ref={illustrationRef}
 					className='illustrationImage'
-					src={illustrationImage}
+					src={illustrationSrc || undefined}
 					alt='Hand-drawn digital portrait illustration of Buhowski — Olexander Tsiomakh (Цьомах Олександр Віталійович), Frontend Developer, Storyteller, Narrative Designer.'
 				/>
 			</div>
