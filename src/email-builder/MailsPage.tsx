@@ -4,10 +4,12 @@ import { emailsConfig } from './emailsConfig';
 import './MailsPage.scss';
 
 const MailsPage = ({ lang }: { lang?: string }) => {
-	const navItems = emailsConfig.map((item) => ({
-		title: item.label,
-		url: item.path,
-	}));
+	const navItems = emailsConfig
+		.filter((item) => item.label)
+		.map((item) => ({
+			title: item.label,
+			url: item.path,
+		}));
 
 	return (
 		<div className='mails-page'>

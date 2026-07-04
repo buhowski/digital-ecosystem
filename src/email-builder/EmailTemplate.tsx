@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { urlTelegram, urlLinkedIn, urlInstagram } from '../components/urlsData';
 
-// TESTING ICONS
+// DEV TESTING ICONS
 // import icon1 from './tg.png';
 // import icon2 from './ig.png';
 // import icon3 from './in.png';
@@ -58,13 +58,16 @@ const S = {
 	}),
 };
 
-// --- Components ---
+// --- COMPONENTS ---
+
+// Row Spacer
 export const EmailPadding = () => (
 	<tr>
 		<td style={{ padding: `40px ${UI.padX}px 0` }} />
 	</tr>
 );
 
+// h2 Title
 export const EmailH2 = ({ content, top = 20 }: { content: string; top?: number }) => (
 	<tr>
 		<td style={S.cell(top)}>
@@ -73,6 +76,7 @@ export const EmailH2 = ({ content, top = 20 }: { content: string; top?: number }
 	</tr>
 );
 
+// h3 Title
 export const EmailH3 = ({ content, top = 10 }: { content: string; top?: number }) => (
 	<tr>
 		<td style={S.cell(top)}>
@@ -81,6 +85,7 @@ export const EmailH3 = ({ content, top = 10 }: { content: string; top?: number }
 	</tr>
 );
 
+// Text Paragraph
 export const EmailText = ({ content }: { content: string }) => (
 	<tr>
 		<td style={S.cell()}>
@@ -89,12 +94,13 @@ export const EmailText = ({ content }: { content: string }) => (
 	</tr>
 );
 
+// List of Links
 const linkBdrRds = '6px';
 
 export const EmailLinkList = ({
 	items,
 }: {
-	items: { title: string; url: string; genre?: string }[];
+	items: { title?: string; url: string; genre?: string }[];
 }) => (
 	<tr>
 		<td style={S.cell(0, 18)}>
@@ -190,6 +196,7 @@ export const EmailLinkList = ({
 	</tr>
 );
 
+// Bullet List
 export const EmailBulletList = ({ items }: { items: string[] }) => (
 	<tr>
 		<td style={S.cell(0, 15)}>
@@ -258,6 +265,7 @@ export const socialLinks = [
 	},
 ];
 
+// Footer Component
 export const EmailFooter = ({
 	links = socialLinks,
 }: {
@@ -398,6 +406,7 @@ export const EmailFooter = ({
 	);
 };
 
+// Preheader Component
 export const EmailPreheader = ({ text }: { text: string }) => {
 	const preheaderText = `«${text}»`;
 	const invisibleTail = '&nbsp;&zwnj;'.repeat(200);
@@ -436,32 +445,7 @@ export const EmailPreheader = ({ text }: { text: string }) => {
 	);
 };
 
-// --- EXPORTER ---
-export const EmailToHtml = (Element: React.ReactElement) => {
-	const lang = Element.props.lang || 'uk';
-	const content = renderToStaticMarkup(Element);
-
-	const fixedContent = content
-		.replace(/cellSpacing/g, 'cellspacing')
-		.replace(/cellPadding/g, 'cellpadding');
-
-	return `<!DOCTYPE html>
-<html lang="${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="x-apple-disable-message-reformatting">
-  <meta name="color-scheme" content="dark">
-  <meta name="supported-color-schemes" content="dark">
-  <title>Startup</title>
-</head>
-<body bgcolor="${C.bodyBg}" style="margin: 0; padding: 0; background-color: ${C.bodyBg}; font-family: ${UI.font}; font-size: 100%;mso-line-height-rule:exactly;">
-  ${fixedContent}
-</body>
-</html>`;
-};
-
+// Email Layout Component
 export const EmailLayout = ({ children, lang }: { children: React.ReactNode; lang?: string }) => (
 	<>
 		<table
@@ -521,6 +505,33 @@ export const EmailLayout = ({ children, lang }: { children: React.ReactNode; lan
 	</>
 );
 
+// EXPORTER
+export const EmailToHtml = (Element: React.ReactElement) => {
+	const lang = Element.props.lang || 'uk';
+	const content = renderToStaticMarkup(Element);
+
+	const fixedContent = content
+		.replace(/cellSpacing/g, 'cellspacing')
+		.replace(/cellPadding/g, 'cellpadding');
+
+	return `<!DOCTYPE html>
+<html lang="${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="dark">
+  <meta name="supported-color-schemes" content="dark">
+  <title>Startup</title>
+</head>
+<body bgcolor="${C.bodyBg}" style="margin: 0; padding: 0; background-color: ${C.bodyBg}; font-family: ${UI.font}; font-size: 100%;mso-line-height-rule:exactly;">
+  ${fixedContent}
+</body>
+</html>`;
+};
+
+// Email Builder Component
 export const EmailBuilder = ({
 	children,
 	subject,
