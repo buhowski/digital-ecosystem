@@ -5,20 +5,20 @@
 - [Portfolio](https://buhowski.dev)
 - [CV](https://buhowski.dev/cv)
 
-## Counterculture Ecosystem
+## Counterculture Media Ecosystem
 
 Developed a market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
 
-- [Ecosystem Vision](https://buhowski.dev/vision)
+- [Manifesto](https://buhowski.dev/vision)
 
 ### Vectors
 
 - [Magazine: Strategy & MVP](https://buhowski.dev/mvp)
-- [Self-Presentation Tools: Video Shows & Experiments](https://buhowski.dev/pilots)
 - [Cinema Development](https://buhowski.dev/cinema)
 - [Gamedev Dimension](https://buhowski.dev/gamedev)
+- [Presentation Tools: Video Shows & Experiments](https://buhowski.dev/pilots)
 
-If you have the drive or know how to scale this — reach out.
+If you know how to scale this — reach out.
 
 <!-- ## Collab
 
