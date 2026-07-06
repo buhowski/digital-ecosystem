@@ -9,10 +9,6 @@
 
 Developed a market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
 
-Needed: accomplices, partners, and investors.
-
-If you have the drive or know how to scale this — reach out.
-
 - [Ecosystem Vision](https://buhowski.dev/vision)
 
 ### Vectors
@@ -21,6 +17,8 @@ If you have the drive or know how to scale this — reach out.
 - [Self-Presentation Tools: Video Shows & Experiments](https://buhowski.dev/pilots)
 - [Cinema Development](https://buhowski.dev/cinema)
 - [Gamedev Dimension](https://buhowski.dev/gamedev)
+
+If you have the drive or know how to scale this — reach out.
 
 <!-- ## Collab
 
