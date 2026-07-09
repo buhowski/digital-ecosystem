@@ -128,7 +128,7 @@
 
 	// .project-description__container
 	&__container {
-		padding: 46px 15px;
+		padding: 40px 15px 45px;
 	}
 
 	// .project-description__name
@@ -149,16 +149,16 @@
 		color: $subtitle-color;
 		font-size: 15px;
 		font-family: $LouisGeorgeCafBold;
-		letter-spacing: 0.6px;
-		margin-bottom: 30px;
+		letter-spacing: 0.8px;
+		margin-bottom: 20px;
 	}
 
 	// .project-description__text
 	&__text {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		font-size: 15px;
 		line-height: 1.5;
-		letter-spacing: 0.25px;
+		letter-spacing: 0.26px;
 	}
 
 	// .project-description__items
@@ -166,15 +166,15 @@
 		font-family: $LouisGeorgeCaf;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 7px;
-		margin-bottom: 45px;
+		gap: 5px;
+		margin-bottom: 40px;
 
 		span {
 			display: inline-block;
-			background-color: rgba(#ffffff, 0.08);
-			border: 1px solid rgba(#ffffff, 0.14);
-			padding: 5px 10px 4px;
-			border-radius: 6px;
+			background-color: rgba(#ffffff, 0.1);
+			border: 1px solid rgba(#ffffff, 0.18);
+			padding: 3px 6px;
+			border-radius: 5px;
 			font-size: 13px;
 		}
 	}
