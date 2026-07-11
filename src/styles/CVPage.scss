@@ -51,6 +51,13 @@
 			fill: currentColor;
 			flex-shrink: 0;
 		}
+
+		&.is-loading {
+			opacity: 0.5;
+			background: #ffffff;
+			color: #000000;
+			pointer-events: none;
+		}
 	}
 
 	.preloader {

@@ -109,8 +109,8 @@
 
 # Netlify Functions
 [[redirects]]
-  from = "/api/cv-downloader"
-  to = "/.netlify/functions/cv-downloader"
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
 
 # Single Page Application (SPA) Routing (200)

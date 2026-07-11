@@ -24,6 +24,7 @@ pnpm-debug.log*
 # Lock files (commit only one, ignore the rest)
 package-lock.json
 yarn.lock
+deno.lock
 pnpm-lock.yaml
 
 # Testing
