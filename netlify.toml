@@ -107,6 +107,12 @@
   status = 301
   force = true
 
+# Netlify Functions
+[[redirects]]
+  from = "/api/cv-downloader"
+  to = "/.netlify/functions/cv-downloader"
+  status = 200
+
 # Single Page Application (SPA) Routing (200)
 [[redirects]]
   from = "/en/*"

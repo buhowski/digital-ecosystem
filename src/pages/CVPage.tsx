@@ -6,6 +6,22 @@ import { cvMetaTags } from '../components/metaTagsBasic';
 const fileId = '12rOT1Pa4Z-Usau2Xkh-QTXweDTZJJTKvadrJKmRpCk0';
 const fileSource = `https://drive.google.com/file/d/${fileId}/preview?rm=minimal`;
 const exportFilePDF = `https://docs.google.com/document/d/${fileId}/export?format=pdf`;
+const downloadPDF = '/api/cv-downloader';
+
+// check proxy availability before download, fallback to direct link on error
+const handleDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+	try {
+		const response = await fetch(downloadPDF, { method: 'HEAD' });
+
+		if (response.ok) {
+			window.location.href = downloadPDF;
+		} else {
+			window.open(exportFilePDF, '_blank', 'noopener,noreferrer');
+		}
+	} catch {
+		window.open(exportFilePDF, '_blank', 'noopener,noreferrer');
+	}
+};
 
 const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string }) => {
 	return (
@@ -31,11 +47,11 @@ const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string 
 
 			<a
 				href={downloadFile}
-				download='CV_Olexander_Tsiomakh_Frontend.pdf'
-				target='_blank'
-				rel='noopener noreferrer'
+				onClick={handleDownload}
 				className='resume__btn'
 				title='Download PDF'
+				target='_blank'
+				rel='noopener noreferrer'
 			>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -59,7 +75,7 @@ const CVPage = () => {
 		<div className={`resume ${loaded ? 'is-loaded' : ''}`}>
 			<PageHelmet metaTags={cvMetaTags} />
 
-			<CVActions link={'/'} downloadFile={exportFilePDF} />
+			<CVActions link={'/'} downloadFile={downloadPDF} />
 
 			{!loaded && <Preloader />}
 
@@ -70,7 +86,7 @@ const CVPage = () => {
 				height='100%'
 				className='resume__frame'
 				onLoad={() => setLoaded(true)}
-				// title='Olexander Tsiomakh — Frontend Developer CV'
+				// title='CV'
 			/>
 		</div>
 	);
