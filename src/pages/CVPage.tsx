@@ -10,11 +10,13 @@ const downloadPDF = '/api/cv-downloader';
 
 // check proxy availability before download, fallback to direct link on error
 const handleDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+	e.preventDefault();
+
 	try {
 		const response = await fetch(downloadPDF, { method: 'HEAD' });
 
 		if (response.ok) {
-			window.location.href = downloadPDF;
+			window.open(downloadPDF, '_blank', 'noopener,noreferrer');
 		} else {
 			window.open(exportFilePDF, '_blank', 'noopener,noreferrer');
 		}
@@ -22,7 +24,6 @@ const handleDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
 		window.open(exportFilePDF, '_blank', 'noopener,noreferrer');
 	}
 };
-
 const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string }) => {
 	return (
 		<nav className='resume__actions'>
@@ -45,14 +46,7 @@ const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string 
 				Portfolio
 			</a>
 
-			<a
-				href={downloadFile}
-				onClick={handleDownload}
-				className='resume__btn'
-				title='Download PDF'
-				target='_blank'
-				rel='noopener noreferrer'
-			>
+			<a href={downloadFile} onClick={handleDownload} className='resume__btn' title='Download PDF'>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 448 512'
