@@ -1,11 +1,11 @@
 const FILE_ID = '12rOT1Pa4Z-Usau2Xkh-QTXweDTZJJTKvadrJKmRpCk0';
-
-const GOOGLE_EXPORT_URL = `https://docs.google.com/document/d/${FILE_ID}/export?format=pdf`;
+const FILE_NAME = 'CV_Olexander_Tsiomakh_Frontend.pdf';
+const EXPORT_URL = `https://docs.google.com/document/d/${FILE_ID}/export?format=pdf`;
 
 // Proxy Google Docs PDF download
 const handler = async () => {
 	try {
-		const response = await fetch(GOOGLE_EXPORT_URL, {
+		const response = await fetch(EXPORT_URL, {
 			redirect: 'follow',
 			headers: {
 				Accept: 'application/pdf',
@@ -29,8 +29,8 @@ const handler = async () => {
 		return new Response(response.body, {
 			headers: {
 				'Content-Type': 'application/pdf',
-				'Content-Disposition': 'attachment; filename="CV_Olexander_Tsiomakh_Frontend.pdf"',
-				'Cache-Control': 'no-store, no-cache, must-revalidate',
+				'Content-Disposition': `attachment; filename="${FILE_NAME}"`,
+				'Cache-Control': 'no-store',
 			},
 		});
 	} catch {

@@ -3,9 +3,9 @@ import Preloader from '../components/Preloader';
 import PageHelmet from '../components/PageHelmet';
 import { cvMetaTags } from '../components/metaTagsBasic';
 
-const fileId = '12rOT1Pa4Z-Usau2Xkh-QTXweDTZJJTKvadrJKmRpCk0';
-const fileSource = `https://drive.google.com/file/d/${fileId}/preview?rm=minimal`;
-const exportFilePDF = `https://docs.google.com/document/d/${fileId}/export?format=pdf`;
+const FILE_ID = '12rOT1Pa4Z-Usau2Xkh-QTXweDTZJJTKvadrJKmRpCk0';
+const EXPORT_URL = `https://docs.google.com/document/d/${FILE_ID}/export?format=pdf`;
+const FILE_SRC = `https://drive.google.com/file/d/${FILE_ID}/preview?rm=minimal`;
 const downloadPDF = '/api/cv-downloader';
 
 // check proxy availability before download, fallback to direct link on error
@@ -18,12 +18,13 @@ const handleDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
 		if (response.ok) {
 			window.open(downloadPDF, '_blank', 'noopener,noreferrer');
 		} else {
-			window.open(exportFilePDF, '_blank', 'noopener,noreferrer');
+			window.open(EXPORT_URL, '_blank', 'noopener,noreferrer');
 		}
 	} catch {
-		window.open(exportFilePDF, '_blank', 'noopener,noreferrer');
+		window.open(EXPORT_URL, '_blank', 'noopener,noreferrer');
 	}
 };
+
 const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string }) => {
 	return (
 		<nav className='resume__actions'>
@@ -75,7 +76,7 @@ const CVPage = () => {
 
 			{/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
 			<iframe
-				src={fileSource}
+				src={FILE_SRC}
 				width='100%'
 				height='100%'
 				className='resume__frame'
