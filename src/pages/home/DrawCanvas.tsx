@@ -207,7 +207,7 @@ export default function DrawCanvas() {
 					ref={illustrationRef}
 					className='illustrationImage'
 					src={illustrationSrc || undefined}
-					alt='Hand-drawn digital portrait illustration of Buhowski — Olexander Tsiomakh (Цьомах Олександр Віталійович), Frontend Developer, Storyteller, Narrative Designer.'
+					alt='Hand-drawn digital portrait illustration of Olexander Buhowski known as Oleksandr Tsomakh, Olexander Tsiomakh, Олександр Цьомах, and buhowski — Frontend Developer, Storyteller, Narrative Designer.'
 				/>
 			</div>
 		</div>
