@@ -70,7 +70,7 @@ const Header = () => {
 
 	const LogoNavLink = () => {
 		return (
-			<NavLink className='logo-link' to='/' aria-label='Home'>
+			<NavLink className='logo-link' to='/' aria-label='Buhowski'>
 				{headerLogo}
 			</NavLink>
 		);

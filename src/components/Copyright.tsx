@@ -7,7 +7,7 @@ const Copyright = () => {
 	return (
 		<div className='copyright'>
 			<p ref={pRef} className={`copyright-text ${isVisible ? 'is-visible' : ''}`}>
-				{new Date().getFullYear()} <span className='symbol'>&copy;</span> Olexander Tsiomakh
+				{new Date().getFullYear()} <span className='symbol'>&copy;</span> Olexander Buhowski
 			</p>
 		</div>
 	);
