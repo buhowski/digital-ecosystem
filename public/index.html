@@ -28,6 +28,36 @@
   <!-- Canonical -->
   <link rel="canonical" href="%REACT_APP_SITE_URL%" />
 
+  <!-- Person structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "%REACT_APP_SITE_URL%#person",
+    "name": "Olexander Tsiomakh",
+    "alternateName": "Olexander Buhowski",
+    "url": "%REACT_APP_SITE_URL%",
+    "image": "%REACT_APP_SITE_IMAGE%",
+    "jobTitle": "Explorer, Developer, Creator",
+    "description": "Olexander Tsiomakh, also known as Olexander Buhowski, is an Explorer, Developer, and Creator behind Another Dimension.",
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "%REACT_APP_SITE_URL%vision#organization",
+      "name": "Another Dimension",
+      "url": "%REACT_APP_SITE_URL%vision"
+    },
+    "sameAs": [
+      "https://www.instagram.com/buhowski",
+      "https://www.facebook.com/buhowski",
+      "https://www.threads.com/@buhowski",
+      "https://github.com/buhowski",
+      "https://www.linkedin.com/in/olexander",
+      "https://dou.ua/users/alexander-tsiomakh/",
+      "https://www.tiktok.com/@buhowski"
+    ]
+  }
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:site_name" content="%REACT_APP_AUTHOR%" />
   <meta property="og:url" content="%REACT_APP_SITE_URL%" />
