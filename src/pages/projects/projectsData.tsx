@@ -1,11 +1,10 @@
-import bgFaberAcademy from './images/faber-academy.jpeg';
-import bgFaberBooks from './images/faber.jpg';
-import bgBentley from './images/bentley.jpg';
-import bgStartup from './images/startup.webp';
-import nascentdesign from './images/nascent.jpg';
-import sendpotion from './images/sendpotion.jpg';
-import hbv from './images/hbv.jpg';
-import mb from './images/mb.jpg';
+import bgFaberBooks from './images/faber-books.jpg';
+import bgBentley from './images/bentley-skinner.jpg';
+// import bgStartup from './images/another-dimension-vision-by-buhowski.jpg';
+import bgStartup from './images/1.jpg';
+import nascentdesign from './images/nascent-design-portfolio-frontend.jpg';
+import hbv from './images/homes-by-victoria.jpg';
+import mb from './images/mark-buchanan-property.jpg';
 
 import { pathToVision } from '../../components/urlsData';
 
@@ -13,7 +12,7 @@ const projectsData = [
 	{
 		img: bgStartup,
 		url: pathToVision,
-		urlCode: 'https://github.com/buhowski/react-typescript',
+		urlCode: 'https://github.com/buhowski/digital-ecosystem',
 		name: 'Media Ecosystem',
 		year: '2026',
 		description: `100% Lighthouse score achieved. Multilingual, cross-industry architecture designed.`,
@@ -31,6 +30,16 @@ const projectsData = [
 			'UI/UX',
 		],
 		alt: 'Screenshot of My Startups project homepage showcasing startup business plans, full development cycle execution, React and TypeScript programming, UI/UX design, creative scripting, genius-level problem solving, strategic brainstorming, innovative design systems, SCSS styling, SEO optimization, Progressive Web App functionality, media innovation, tech entrepreneurship, interactive digital solutions, inventive coding, forward-thinking creative projects',
+	},
+
+	{
+		img: nascentdesign,
+		url: `https://nascentdesign.com`,
+		name: 'Nascent Design',
+		year: '2022',
+		description: `Responsive Design with GSAP animations`,
+		skills: ['JavaScript', 'GSAP', 'SCSS'],
+		alt: 'Screenshot of Nascent Design website homepage with animations',
 	},
 
 	{
@@ -54,26 +63,6 @@ const projectsData = [
 	},
 
 	{
-		img: sendpotion,
-		url: `https://demo-showcase-sendpotion.netlify.app`,
-		name: 'Potion AI',
-		year: '2022',
-		description: `Motion‑driven UI with GSAP animations`,
-		skills: ['JavaScript', 'GSAP', 'Styles'],
-		alt: 'Screenshot of Potion AI website homepage showing responsive web design and animations',
-	},
-
-	{
-		img: nascentdesign,
-		url: `https://nascentdesign.com`,
-		name: 'Nascent Design',
-		year: '2022',
-		description: `Responsive Design with GSAP animations`,
-		skills: ['JavaScript', 'GSAP', 'SCSS'],
-		alt: 'Screenshot of Nascent Design website homepage with animations',
-	},
-
-	{
 		img: bgBentley,
 		url: 'https://www.bentley-skinner.co.uk',
 		name: 'Bentley & Skinner',
@@ -81,16 +70,6 @@ const projectsData = [
 		description: 'Pixel Perfect WordPress e‑commerce with GSAP & Barba.js transitions',
 		skills: ['JavaScript', 'Barba.js', 'GSAP', 'SCSS', 'WordPress'],
 		alt: 'Screenshot of Bentley & Skinner jewelry and antique website homepage',
-	},
-
-	{
-		img: bgFaberAcademy,
-		url: 'https://faberacademy.com',
-		name: 'Faber Academy',
-		year: '2021',
-		description: 'Pixel Perfect WordPress e‑commerce with GSAP animations',
-		skills: ['JavaScript', 'GSAP', 'SCSS', 'WordPress', 'Google Maps API'],
-		alt: 'Screenshot of Faber Academy writing courses platform homepage',
 	},
 
 	{

@@ -11,8 +11,12 @@
 	padding-top: 50px;
 	padding-bottom: 120px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-	gap: 40px;
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	gap: 50px;
+
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
 }
 
 .project {
@@ -53,14 +57,26 @@
 		}
 	}
 
+	&:first-child {
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
 	// .project__inner
 	&__inner {
 		position: relative;
 		overflow: hidden;
 		border: 1px solid var(--border-color);
 		border-radius: var(--radius);
-		height: 420px;
+		aspect-ratio: 1 / 1;
 		transition: box-shadow var(--hover-delay);
+
+		@include mobile {
+			aspect-ratio: auto;
+			height: 420px;
+		}
 	}
 
 	// .project-description

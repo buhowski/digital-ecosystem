@@ -1,5 +1,5 @@
 // Images
-import planPoster from '../../../assets/startup/vision.jpg';
+import planPoster from '../../../assets/startup/another-dimension-vision-by-buhowski.jpg';
 import posterProjectsDev from '../../../assets/startup/brain.jpg';
 import writer from '../../../assets/startup/writer.webp';
 import posterOnceInUkraine from '../../../assets/startup/cinema/once.webp';
