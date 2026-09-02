@@ -1,30 +1,33 @@
 @import '../../styles/variables.scss';
 
+:root {
+	--hover-delay: #{$transition-s} #{$transition-s};
+	--radius: 12px;
+	--action-color: #{$link-color};
+	--border-color: #46494d;
+}
+
 .projects-container {
 	padding-top: 50px;
-	padding-bottom: 100px;
-
-	// .projects-container__masonry
-	&__masonry {
-		gap: 40px !important;
-	}
+	padding-bottom: 120px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+	gap: 40px;
 }
 
 .project {
 	width: 100%;
-	min-height: 420px;
 	position: relative;
-	border-radius: 20px;
+	border-radius: var(--radius);
 	transform: translate(0, 0);
 	transition:
 		transform $transition-s,
 		box-shadow $transition-s,
 		border-color $transition-s;
-	border: 1px solid rgba(#61676d, 0.6);
-	box-shadow: 0 6px 24px rgba(#000000, 0.9);
+	box-shadow: 0 4px 26px rgba(#000000, 0.6);
 
 	@include tablet {
-		box-shadow: 0 3px 15px rgba(#000000, 0.84);
+		box-shadow: 0 2px 12px rgba(#000000, 0.6);
 	}
 
 	&::before {
@@ -37,12 +40,12 @@
 		height: calc(100% - 10px);
 		background-color: $blue-main;
 		background: $transition-gradient;
-		border-radius: 20px;
+		border-radius: var(--radius);
 		transform: translateY(0);
 		transition:
-			transform $transition-s $transition-s,
-			height $transition-s $transition-s,
-			width $transition-s $transition-s;
+			transform var(--hover-delay),
+			height var(--hover-delay),
+			width var(--hover-delay);
 
 		@include mobile {
 			width: calc(100% - 5px);
@@ -50,32 +53,147 @@
 		}
 	}
 
+	// .project__inner
+	&__inner {
+		position: relative;
+		overflow: hidden;
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius);
+		height: 420px;
+		transition: box-shadow var(--hover-delay);
+	}
+
+	// .project-description
+	&-description {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(#000000, 0.9);
+		backdrop-filter: blur(6px);
+		box-shadow: 0 0 12px rgba(#000000, 0.65);
+		color: $text-color;
+		overflow: hidden;
+		z-index: 4;
+		transform: translateY(calc(100% - 60px));
+		transition: transform var(--hover-delay);
+		border-top: 1px solid var(--border-color);
+		will-change: transform;
+
+		// .project-description__container
+		&__container {
+			padding: 20px 15px 30px;
+		}
+
+		// .project-description__header
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 18px;
+			gap: 15px;
+
+			&:hover {
+				.project-description__name {
+					color: var(--action-color);
+				}
+			}
+		}
+
+		// .project-description__name
+		&__name {
+			color: $body-color;
+			font-family: $LouisGeorgeCafBold;
+			letter-spacing: 1px;
+			font-size: 18px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			transition: color $transition-s;
+
+			span {
+				color: var(--action-color);
+			}
+		}
+
+		// .project-description__year
+		&__year {
+			color: $subtitle-color;
+			font-size: 14px;
+			font-family: $LouisGeorgeCafBold;
+			letter-spacing: 0.8px;
+		}
+
+		// .project-description__text
+		&__text {
+			margin-bottom: 18px;
+			font-size: 14px;
+			line-height: 1.5;
+			letter-spacing: 0.2px;
+			color: #c8c8c8;
+		}
+
+		// .project-description__items
+		&__items {
+			font-family: $LouisGeorgeCaf;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+			margin-bottom: 30px;
+
+			span {
+				display: inline-block;
+				background: rgba(#000000, 0.4);
+				border: 0.5px solid rgba(255, 255, 255, 0.22);
+				color: #c8c8c8;
+				padding: 3px 8px;
+				border-radius: 4px;
+				font-size: 11px;
+			}
+		}
+
+		// .project-description__actions
+		&__actions {
+			display: flex;
+			// justify-content: center;
+			gap: 25px;
+		}
+
+		&__action {
+			text-align: center;
+			font-family: $LouisGeorgeCafBold;
+			// text-transform: lowercase;
+			padding: 8px 10px;
+			flex-grow: 1;
+			width: 100%;
+			max-width: 145px;
+			letter-spacing: 1.4px;
+			border-radius: 10px;
+			color: var(--action-color);
+			border: 1px solid rgba($link-color, 0.5);
+			background-color: #000000;
+			transition:
+				box-shadow $transition-s,
+				background-color $transition-s,
+				color $transition-s;
+
+			&:hover {
+				background-color: var(--action-color);
+				color: #000000;
+			}
+		}
+	}
+
 	// .project-link
 	&-link {
 		display: block;
-		position: relative;
 		height: 100%;
 		background-color: #000000;
-		border-radius: 20px;
-		// box-shadow: 0 0 10px #000000;
-		transition: box-shadow $transition-s;
-		overflow: hidden;
-
-		// .project-link__img
-		&__img {
-			filter: brightness(0.666);
-			border-radius: 20px;
-			height: 100%;
-			object-fit: contain;
-			transition: filter $transition-s;
-		}
 	}
 
 	&:hover {
 		z-index: 2;
 		transform: translate(-10px, -20px);
-		border-color: transparent;
-		box-shadow: none;
 
 		@include mobile {
 			transform: translate(0, -20px);
@@ -92,126 +210,22 @@
 			}
 		}
 
-		.project-link {
-			box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.7);
+		.project__inner {
+			box-shadow: 6px 6px 12px rgba(#000000, 0.5);
 
 			@include mobile {
-				box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.7);
-			}
-
-			&__img {
-				filter: brightness(1);
+				box-shadow: 0 5px 10px rgba(#000000, 0.5);
 			}
 		}
 
 		.project-description {
-			opacity: 1;
+			transform: translateY(0);
 		}
-	}
-}
 
-.project-description {
-	position: sticky;
-	top: 13%;
-	left: 0;
-	width: 100%;
-	background-color: rgba(#000000, 0.9);
-	backdrop-filter: blur(6px);
-	box-shadow: 0 2px 16px 2px rgba(#000000, 1);
-	border: 1px solid rgba(#61676d, 0.84);
-	border-radius: 20px;
-	color: $text-color;
-	overflow: hidden;
-	z-index: 4;
-	opacity: 0;
-	transition: opacity $transition-s;
-
-	// .project-description__container
-	&__container {
-		padding: 40px 15px 45px;
-	}
-
-	// .project-description__name
-	&__name {
-		color: $h1-color;
-		font-family: $LouisGeorgeCafBold;
-		letter-spacing: 1px;
-		margin-bottom: 6px;
-		font-size: 23px;
-
-		span {
-			animation: LowLine 0.4s infinite;
-		}
-	}
-
-	// .project-description__year
-	&__year {
-		color: $subtitle-color;
-		font-size: 15px;
-		font-family: $LouisGeorgeCafBold;
-		letter-spacing: 0.8px;
-		margin-bottom: 20px;
-	}
-
-	// .project-description__text
-	&__text {
-		margin-bottom: 20px;
-		font-size: 15px;
-		line-height: 1.5;
-		letter-spacing: 0.26px;
-	}
-
-	// .project-description__items
-	&__items {
-		font-family: $LouisGeorgeCaf;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 5px;
-		margin-bottom: 40px;
-
-		span {
-			display: inline-block;
-			background-color: rgba(#ffffff, 0.1);
-			border: 1px solid rgba(#ffffff, 0.18);
-			padding: 3px 6px;
-			border-radius: 5px;
-			font-size: 13px;
-		}
-	}
-
-	// .project-description__actions
-	&__actions {
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-	}
-
-	&__action {
-		text-align: center;
-		font-family: $LouisGeorgeCafBold;
-		text-transform: uppercase;
-		padding: 8px 10px;
-		flex-grow: 1;
-		width: 100%;
-		max-width: 140px;
-		letter-spacing: 1px;
-		border-radius: 100px;
-		color: $link-color;
-		text-shadow: 0 0 5px rgba($link-color, 0.88);
-		border: 1px solid rgba($link-color, 0.55);
-		background-color: #000000;
-		box-shadow: 0 1px 4px 1px #000000;
-		transition:
-			box-shadow $transition-s,
-			background-color $transition-s,
-			color $transition-s;
-
-		&:hover {
-			background-color: $link-color;
-			color: #000000;
-			box-shadow:
-				0 1px 4px 1px #000000,
-				0 2px 6px rgba($link-color, 0.9);
+		.project-description__name {
+			span {
+				animation: LowLine 0.4s infinite;
+			}
 		}
 	}
 }

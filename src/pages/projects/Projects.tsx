@@ -1,61 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Masonry from 'react-responsive-masonry';
-import { ResponsiveMasonry as ResponsiveMasonryBase } from 'react-responsive-masonry';
+import { useRef } from 'react';
 import PageHelmet from '../../components/PageHelmet';
 import { portfolioMetaTags } from '../../components/metaTagsBasic';
 import projectsData from './projectsData';
 import './Projects.scss';
 
-const ResponsiveMasonry = ResponsiveMasonryBase as unknown as React.FC<
-	React.PropsWithChildren<any>
->;
-const MasonryTyped = Masonry as unknown as React.FC<React.PropsWithChildren<any>>;
-
 const Projects = () => {
-	const [gap, setGap] = useState('40px');
 	const descriptionRefs = useRef<Array<HTMLDivElement | null>>([]);
-	const linkRefs = useRef<Array<HTMLAnchorElement | null>>([]);
-
-	const handleResize = () => {
-		if (window.innerWidth <= 767) {
-			setGap('70px');
-		} else {
-			setGap('40px');
-		}
-	};
-
-	const adjustMargins = () => {
-		descriptionRefs.current.forEach((desc, i) => {
-			if (desc && linkRefs.current[i]) {
-				const height = desc.offsetHeight;
-				linkRefs.current[i]!.style.marginTop = `-${height}px`;
-			}
-		});
-	};
-
-	useEffect(() => {
-		handleResize();
-		window.addEventListener('resize', handleResize);
-
-		// Use ResizeObserver if supported
-		const observers: ResizeObserver[] = [];
-		if (typeof ResizeObserver !== 'undefined') {
-			descriptionRefs.current.forEach((desc, i) => {
-				if (desc && linkRefs.current[i]) {
-					const ro = new ResizeObserver(adjustMargins);
-					ro.observe(desc);
-					observers.push(ro);
-				}
-			});
-			adjustMargins(); // initial adjustment
-			return () => observers.forEach((ro) => ro.disconnect());
-		}
-
-		// Fallback: window resize
-		adjustMargins();
-		window.addEventListener('resize', adjustMargins);
-		return () => window.removeEventListener('resize', adjustMargins);
-	}, []);
 
 	return (
 		<div className='wrapper wrapper--projects'>
@@ -64,15 +14,17 @@ const Projects = () => {
 			<h1 className='base-title h1'>Some Works</h1>
 
 			<div className='projects-container'>
-				<ResponsiveMasonry columnsCountBreakPoints={{ 320: 1, 666: 2, 1024: 3, 1281: 5 }}>
-					<MasonryTyped itemStyle={{ gap }} className='projects-container__masonry'>
-						{projectsData.map(({ img, url, urlCode, name, year, description, skills, alt }, i) => (
-							<div className='project' key={i}>
-								<div
-									className='project-description'
-									ref={(el) => (descriptionRefs.current[i] = el)}
-								>
-									<div className='project-description__container'>
+				{projectsData.map(({ img, url, urlCode, name, year, description, skills, alt }, i) => (
+					<div className='project' key={i}>
+						<div className='project__inner'>
+							<div className='project-description' ref={(el) => (descriptionRefs.current[i] = el)}>
+								<div className='project-description__container'>
+									<a
+										href={url}
+										target='_blank'
+										rel='noopener noreferrer'
+										className='project-description__header'
+									>
 										{name && (
 											<p className='project-description__name'>
 												{name}
@@ -81,56 +33,50 @@ const Projects = () => {
 										)}
 
 										{year && <p className='project-description__year'>{year}</p>}
+									</a>
 
-										{description && <p className='project-description__text'>{description}</p>}
+									{description && <p className='project-description__text'>{description}</p>}
 
-										{skills && (
-											<div className='project-description__items'>
-												{skills?.map((skill, i) => (
-													<span key={i}>{skill}</span>
-												))}
-											</div>
+									{skills && (
+										<div className='project-description__items'>
+											{skills?.map((skill, i) => (
+												<span key={i}>{skill}</span>
+											))}
+										</div>
+									)}
+
+									<div className='project-description__actions'>
+										{url && (
+											<a
+												href={url}
+												target='_blank'
+												rel='noopener noreferrer'
+												className='project-description__action'
+											>
+												Live
+											</a>
 										)}
 
-										<div className='project-description__actions'>
-											{url && (
-												<a
-													href={url}
-													target='_blank'
-													rel='noopener noreferrer'
-													className='project-description__action'
-												>
-													LIVE
-												</a>
-											)}
-
-											{urlCode && (
-												<a
-													href={urlCode}
-													target='_blank'
-													rel='noopener noreferrer'
-													className='project-description__action'
-												>
-													Code
-												</a>
-											)}
-										</div>
+										{urlCode && (
+											<a
+												href={urlCode}
+												target='_blank'
+												rel='noopener noreferrer'
+												className='project-description__action'
+											>
+												Code
+											</a>
+										)}
 									</div>
 								</div>
-
-								<a
-									className='project-link'
-									href={url}
-									target='_blank'
-									rel='noopener noreferrer'
-									ref={(el) => (linkRefs.current[i] = el)}
-								>
-									<img className='project-link__img' src={img} alt={alt} />
-								</a>
 							</div>
-						))}
-					</MasonryTyped>
-				</ResponsiveMasonry>
+
+							<a className='project-link' href={url} target='_blank' rel='noopener noreferrer'>
+								<img className='project-link__img' src={img} alt={alt} />
+							</a>
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	);

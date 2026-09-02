@@ -1,5 +1,3 @@
-import bgNakashima from './images/nakashima-screen.jpg';
-import bgEnde from './images/ende.jpg';
 import bgFaberAcademy from './images/faber-academy.jpeg';
 import bgFaberBooks from './images/faber.jpg';
 import bgBentley from './images/bentley.jpg';
@@ -69,7 +67,7 @@ const projectsData = [
 		img: nascentdesign,
 		url: `https://nascentdesign.com`,
 		name: 'Nascent Design',
-		year: '2021',
+		year: '2022',
 		description: `Responsive Design with GSAP animations`,
 		skills: ['JavaScript', 'GSAP', 'SCSS'],
 		alt: 'Screenshot of Nascent Design website homepage with animations',
@@ -79,7 +77,7 @@ const projectsData = [
 		img: bgBentley,
 		url: 'https://www.bentley-skinner.co.uk',
 		name: 'Bentley & Skinner',
-		year: '2022',
+		year: '2021',
 		description: 'Pixel Perfect WordPress e‑commerce with GSAP & Barba.js transitions',
 		skills: ['JavaScript', 'Barba.js', 'GSAP', 'SCSS', 'WordPress'],
 		alt: 'Screenshot of Bentley & Skinner jewelry and antique website homepage',
@@ -103,26 +101,6 @@ const projectsData = [
 		description: 'Pixel Perfect WordPress e‑commerce with responsive UI/UX',
 		skills: ['JavaScript', 'GSAP', 'SCSS', 'WordPress', 'Pixel Perfect'],
 		alt: 'Screenshot of Faber Books publisher website homepage',
-	},
-
-	{
-		img: bgEnde,
-		url: 'https://www-somosende-com.vercel.app',
-		name: 'Somos ENDE',
-		year: '2019',
-		description: 'Responsive site with custom animations',
-		skills: ['JavaScript', 'HTML', 'CSS'],
-		alt: 'Screenshot of Somos ENDE content studio website homepage with animations',
-	},
-
-	{
-		img: bgNakashima,
-		url: 'https://nakashimawoodworkers.com/',
-		name: 'Nakashima Woodworkers',
-		year: '2019',
-		description: 'Responsive site with Barba.js transitions',
-		skills: ['JavaScript', 'Barba.js', 'HTML', 'CSS'],
-		alt: 'Screenshot of Nakashima Woodworkers furniture studio website homepage',
 	},
 ];
 
