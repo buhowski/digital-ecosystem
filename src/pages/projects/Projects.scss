@@ -66,11 +66,13 @@
 
 	// .project__inner
 	&__inner {
+		width: 100%;
+		aspect-ratio: 1 / 1;
 		position: relative;
 		overflow: hidden;
 		border: 1px solid var(--border-color);
 		border-radius: var(--radius);
-		aspect-ratio: 1 / 1;
+
 		transition: box-shadow var(--hover-delay);
 
 		@include mobile {
@@ -85,13 +87,13 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		background-color: rgba(#000000, 0.9);
+		background-color: rgba(#000000, 0.89);
 		backdrop-filter: blur(6px);
 		box-shadow: 0 0 12px rgba(#000000, 0.65);
 		color: $text-color;
 		overflow: hidden;
 		z-index: 4;
-		transform: translateY(calc(100% - 60px));
+		transform: translateY(calc(100% - 64px));
 		transition: transform var(--hover-delay);
 		border-top: 1px solid var(--border-color);
 		will-change: transform;
@@ -106,7 +108,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: baseline;
-			margin-bottom: 18px;
+			margin-bottom: 20px;
 			gap: 15px;
 
 			&:hover {
@@ -121,7 +123,7 @@
 			color: $body-color;
 			font-family: $LouisGeorgeCafBold;
 			letter-spacing: 1px;
-			font-size: 18px;
+			font-size: 19px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -135,7 +137,7 @@
 		// .project-description__year
 		&__year {
 			color: $subtitle-color;
-			font-size: 14px;
+			font-size: 15px;
 			font-family: $LouisGeorgeCafBold;
 			letter-spacing: 0.8px;
 		}
@@ -145,7 +147,6 @@
 			margin-bottom: 18px;
 			font-size: 14px;
 			line-height: 1.5;
-			letter-spacing: 0.2px;
 			color: #c8c8c8;
 		}
 
@@ -154,17 +155,17 @@
 			font-family: $LouisGeorgeCaf;
 			display: flex;
 			flex-wrap: wrap;
-			gap: 5px;
+			gap: 6px;
 			margin-bottom: 30px;
 
 			span {
 				display: inline-block;
-				background: rgba(#000000, 0.4);
-				border: 0.5px solid rgba(255, 255, 255, 0.22);
-				color: #c8c8c8;
+				background: rgba(#000000, 0.5);
+				border: 0.5px solid rgba(255, 255, 255, 0.24);
+				color: $subtitle-color;
 				padding: 3px 8px;
 				border-radius: 4px;
-				font-size: 11px;
+				font-size: 12px;
 			}
 		}
 
@@ -205,6 +206,12 @@
 		display: block;
 		height: 100%;
 		background-color: #000000;
+
+		&:hover ~ .project-description {
+			.project-description__name {
+				color: var(--action-color);
+			}
+		}
 	}
 
 	&:hover {

@@ -17,6 +17,10 @@ const Projects = () => {
 				{projectsData.map(({ img, url, urlCode, name, year, description, skills, alt }, i) => (
 					<div className='project' key={i}>
 						<div className='project__inner'>
+							<a className='project-link' href={url} target='_blank' rel='noopener noreferrer'>
+								<img className='project-link__img' src={img} alt={alt} />
+							</a>
+
 							<div className='project-description' ref={(el) => (descriptionRefs.current[i] = el)}>
 								<div className='project-description__container'>
 									<a
@@ -70,10 +74,6 @@ const Projects = () => {
 									</div>
 								</div>
 							</div>
-
-							<a className='project-link' href={url} target='_blank' rel='noopener noreferrer'>
-								<img className='project-link__img' src={img} alt={alt} />
-							</a>
 						</div>
 					</div>
 				))}
