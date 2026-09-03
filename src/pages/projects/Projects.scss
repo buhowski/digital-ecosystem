@@ -59,8 +59,9 @@
 
 	&:first-child {
 		img {
+			object-fit: contain;
+			object-position: center 38%;
 			height: 100%;
-			object-fit: cover;
 		}
 	}
 
@@ -93,10 +94,9 @@
 		color: $text-color;
 		overflow: hidden;
 		z-index: 4;
-		transform: translateY(calc(100% - 64px));
+		transform: translateY(calc(100% - 67px));
 		transition: transform var(--hover-delay);
 		border-top: 1px solid var(--border-color);
-		will-change: transform;
 
 		// .project-description__container
 		&__container {
@@ -109,7 +109,7 @@
 			justify-content: space-between;
 			align-items: baseline;
 			margin-bottom: 20px;
-			gap: 15px;
+			gap: 10px;
 
 			&:hover {
 				.project-description__name {
@@ -123,7 +123,7 @@
 			color: $body-color;
 			font-family: $LouisGeorgeCafBold;
 			letter-spacing: 1px;
-			font-size: 19px;
+			font-size: 21px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -172,22 +172,20 @@
 		// .project-description__actions
 		&__actions {
 			display: flex;
-			// justify-content: center;
 			gap: 25px;
 		}
 
 		&__action {
 			text-align: center;
 			font-family: $LouisGeorgeCafBold;
-			// text-transform: lowercase;
 			padding: 8px 10px;
 			flex-grow: 1;
 			width: 100%;
-			max-width: 145px;
+			max-width: 150px;
 			letter-spacing: 1.4px;
 			border-radius: 10px;
 			color: var(--action-color);
-			border: 1px solid rgba($link-color, 0.5);
+			border: 1px solid rgba($link-color, 0.55);
 			background-color: #000000;
 			transition:
 				box-shadow $transition-s,
@@ -250,5 +248,14 @@
 				animation: LowLine 0.4s infinite;
 			}
 		}
+
+		.project-link__img {
+			transform: scale(1.28);
+		}
+	}
+
+	img {
+		transition: transform $transition-l;
+		will-change: transform;
 	}
 }

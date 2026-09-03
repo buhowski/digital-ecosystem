@@ -1,5 +1,5 @@
 // Images
-import planPoster from '../../../assets/startup/another-dimension-vision-by-buhowski.jpg';
+import planPoster from '../../../assets/startup/another-dimension-universe-vision-by-olexander-buhowski.jpg';
 import posterProjectsDev from '../../../assets/startup/brain.jpg';
 import writer from '../../../assets/startup/writer.webp';
 import posterOnceInUkraine from '../../../assets/startup/cinema/once.webp';
@@ -17,7 +17,7 @@ export const dataSliderProjectDev = [
 	{
 		itemSrc: posterProjectsDev,
 		itemAlt:
-			'Illustration of collaborative project development — games, films, animation, indie media and startup ventures, made by Buhowski.',
+			'Illustration of collaborative project development — games, films, animation, indie media and startup ventures, made by Olexander Buhowski.',
 	},
 ];
 
@@ -25,7 +25,7 @@ export const dataSliderVision = [
 	{
 		itemSrc: planPoster,
 		itemAlt:
-			'Illustration of a next-gen media platform — film, gamedev, production, Tech, IT, counterculture and digital storytelling, made by Buhowski.',
+			'Illustration of a next-gen media platform — film, gamedev, production, Tech, IT, counterculture and digital storytelling, made by Olexander Buhowski.',
 	},
 ];
 
@@ -41,7 +41,7 @@ export const dataSliderOnceInUkraine = [
 	{
 		itemSrc: posterOnceInUkraine,
 		itemAlt:
-			'Once Upon a Time in Ukraine — social drama poster, young couple, Ukrainian city block, cinematic realism, made by Buhowski.',
+			'Once Upon a Time in Ukraine — social drama poster, young couple, Ukrainian city block, cinematic realism, made by Olexander Buhowski.',
 	},
 ];
 
@@ -49,7 +49,7 @@ export const dataSliderVolynWedding = [
 	{
 		itemSrc: posterVolynWedding,
 		itemAlt:
-			"Volyn Wedding: Groom's Room — dark comedy poster, six battered characters on a broken Soviet car, Ukrainian countryside, made by Buhowski.",
+			"Volyn Wedding: Groom's Room — dark comedy poster, six battered characters on a broken Soviet car, Ukrainian countryside, made by Olexander Buhowski.",
 	},
 ];
 
@@ -57,7 +57,7 @@ export const dataSliderSheHe = [
 	{
 		itemSrc: posterSheHe,
 		itemAlt:
-			'She + He — tragic romance poster, man in devil armor and woman as goddess at masquerade, urban mystical atmosphere, made by Buhowski.',
+			'She + He — tragic romance poster, man in devil armor and woman as goddess at masquerade, urban mystical atmosphere, made by Olexander Buhowski.',
 	},
 ];
 
@@ -65,12 +65,12 @@ export const dataSliderWoodenFiction = [
 	{
 		itemSrc: poster2WoodenFiction,
 		itemAlt:
-			'Wooden Fiction — animated dark crime comedy poster, twisted fairytale characters, post-Soviet grotesque style, made by Buhowski.',
+			'Wooden Fiction — animated dark crime comedy poster, twisted fairytale characters, post-Soviet grotesque style, made by Olexander Buhowski.',
 	},
 	{
 		itemSrc: posterWoodenFiction,
 		itemAlt:
-			'Wooden Fiction — animated dark crime comedy poster, twisted fairytale characters, post-Soviet grotesque style, made by Buhowski.',
+			'Wooden Fiction — animated dark crime comedy poster, twisted fairytale characters, post-Soviet grotesque style, made by Olexander Buhowski.',
 	},
 ];
 
@@ -78,14 +78,14 @@ export const dataSliderLilithsAdventure = [
 	{
 		itemSrc: posterLilithsAdventure,
 		itemAlt:
-			"Lilith's Adventure — animated comedy poster, adventurer girl exploring parallel worlds with a magical diary, made by Buhowski.",
+			"Lilith's Adventure — animated comedy poster, adventurer girl exploring parallel worlds with a magical diary, made by Olexander Buhowski.",
 	},
 	{
 		itemPoster: LilithVideoExamplePoster,
 		itemSrc: LilithVideoExample,
 		itemAlt:
-			"Lilith's Adventure — wanderer lost in parallel dimensions, surreal multiverse comedy inspired by Rick and Morty, made by Buhowski.",
+			"Lilith's Adventure — wanderer lost in parallel dimensions, surreal multiverse comedy inspired by Rick and Morty, made by Olexander Buhowski.",
 		itemCaption:
-			"The wanderer's endless search across dimensions (Post-credit ref — Rick & Morty S7E5), made by Buhowski.",
+			"The wanderer's endless search across dimensions (Post-credit ref — Rick & Morty S7E5)",
 	},
 ];
