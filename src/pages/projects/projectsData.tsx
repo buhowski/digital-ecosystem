@@ -43,17 +43,6 @@ const projectsData = [
 	},
 
 	{
-		img: bgBentley,
-		url: 'https://www.bentley-skinner.co.uk',
-		name: 'Bentley & Skinner',
-		year: '2021',
-		description:
-			'Pixel-perfect luxury e-commerce. Seamless Barba.js transitions. GSAP visual effects.',
-		skills: ['JavaScript', 'Barba.js', 'GSAP', 'SCSS', 'WordPress'],
-		alt: 'Bentley and Skinner luxury jewelry e-commerce website - custom WordPress web design, GSAP Barba.js smooth page transitions, frontend developer portfolio showcase by Olexander Buhowski',
-	},
-
-	{
 		img: mb,
 		url: 'https://markbuchananproperty.co.uk/',
 		name: 'Mark Buchanan',
@@ -61,6 +50,16 @@ const projectsData = [
 		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
 		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
 		alt: 'Mark Buchanan property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
+	},
+
+	{
+		img: hbv,
+		url: 'https://homesbyvictoria.co.uk/',
+		name: 'Homes By Victoria',
+		year: '2024',
+		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
+		alt: 'Homes By Victoria real estate e-commerce website homepage - custom WordPress web development, SCSS PHP UI UX design, frontend portfolio project by Olexander Buhowski',
 	},
 
 	{
@@ -74,13 +73,14 @@ const projectsData = [
 	},
 
 	{
-		img: hbv,
-		url: 'https://homesbyvictoria.co.uk/',
-		name: 'Homes By Victoria',
-		year: '2024',
-		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
-		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
-		alt: 'Homes By Victoria real estate e-commerce website homepage - custom WordPress web development, SCSS PHP UI UX design, frontend portfolio project by Olexander Buhowski',
+		img: bgBentley,
+		url: 'https://www.bentley-skinner.co.uk',
+		name: 'Bentley & Skinner',
+		year: '2021',
+		description:
+			'Pixel-perfect luxury e-commerce. Seamless Barba.js transitions. GSAP visual effects.',
+		skills: ['JavaScript', 'Barba.js', 'GSAP', 'SCSS', 'WordPress'],
+		alt: 'Bentley and Skinner luxury jewelry e-commerce website - custom WordPress web design, GSAP Barba.js smooth page transitions, frontend developer portfolio showcase by Olexander Buhowski',
 	},
 ];
 
