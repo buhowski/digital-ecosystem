@@ -3,7 +3,7 @@ import bgBentley from './images/bentley-skinner.jpg';
 import bgStartup from '../../assets/startup/another-dimension-universe-vision-by-olexander-buhowski.jpg';
 import nascentdesign from './images/nascent-design-portfolio-frontend.jpg';
 import taylors from './images/taylors-estateagents.jpg';
-import mb from './images/mark-buchanan-property.jpg';
+import wr from './images/west-riding.jpg';
 
 import { pathToVision } from '../../components/urlsData';
 
@@ -43,24 +43,34 @@ const projectsData = [
 	},
 
 	{
+		img: wr,
+		url: 'https://west-riding.co.uk/',
+		name: 'West Riding',
+		year: '2025',
+		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
+		alt: 'Looking for trusted estate agents in Saddleworth? We are passionate about property and providing a tailored solution to selling your home.',
+	},
+
+	{
 		img: taylors,
 		url: 'https://taylors-estateagents.co.uk/',
 		name: 'Taylors Estate Agents',
-		year: '2025',
+		year: '2024',
 		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
 		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
 		alt: 'Taylors Estate Agents, specialising in residential sales, lettings in Stourbridge, Kingswinford, Halesowen, Sedgley, Brierley Hill, Bearwood West Midland.',
 	},
 
-	{
-		img: mb,
-		url: 'https://markbuchananproperty.co.uk/',
-		name: 'Mark Buchanan',
-		year: '2024',
-		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
-		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
-		alt: 'Mark Buchanan property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
-	},
+	// {
+	// 	img: mb,
+	// 	url: 'https://markbuchananproperty.co.uk/',
+	// 	name: 'Mark Buchanan',
+	// 	year: '2024',
+	// 	description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+	// 	skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
+	// 	alt: 'Mark Buchanan property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
+	// },
 
 	// {
 	// 	img: hbv,
@@ -92,6 +102,16 @@ const projectsData = [
 		skills: ['JavaScript', 'GSAP', 'SCSS', 'WordPress', 'Pixel Perfect'],
 		alt: 'Faber Books publisher e-commerce website homepage - pixel perfect WordPress web development, GSAP animations, responsive UI UX design, frontend portfolio project by Olexander Buhowski',
 	},
+
+	// {
+	//  img: h20,
+	// 	url: 'https://www.h2oluxembourg.com/',
+	// 	name: 'H2O Luxembourg',
+	// 	year: '2019',
+	// 	description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+	// 	skills: ['JavaScript', 'jQuery', 'SCSS'],
+	// 	alt: 'H2O Luxembourg property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
+	// },
 ];
 
 export default projectsData;
