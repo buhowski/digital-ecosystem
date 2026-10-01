@@ -50,4 +50,4 @@ From the very beginning, the characters were not meant to be together. This love
 
 *Under Construction …*
 
-Needed: accomplices and resources to make it happen. If you have the drive or know how to scale this — reach out.
+Looking for accomplices and resources to make it happen. If you have the drive or know how to scale this — reach out.
