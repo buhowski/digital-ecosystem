@@ -6,7 +6,7 @@
 
 ## Logline
 
-He is an unfinished experiment of the Church, a botched mistake of the executioners who survived despite their plan for demonic dominion. To piece himself together from the shards of oblivion, he must endure the hell of shattered memories and tame the darkness in his blood that hungers for control.
+He is an unfinished experiment of the Church, a torturers' mistake that survived despite their plan of demonic dominance. To piece himself together from the shards of oblivion, he will have to fight through a hell of shattered memories and harness the darkness in his blood before it claims him completely.
 
 ## Concept
 
