@@ -160,7 +160,7 @@
 .copyright {
 	display: inline-block;
 	font-size: 14px;
-	color: rgba($text-color, 0.22);
+	color: rgba($text-color, 0.4);
 	font-family: $LouisGeorgeCafBold;
 
 	.copyright-text {
@@ -465,6 +465,7 @@
 
 @mixin btn-more_hover {
 	background-color: rgba(#000000, 0.28);
+	box-shadow: 0 5px 18px rgba(#000, 0.5);
 
 	&::before,
 	&::after {
@@ -484,8 +485,10 @@
 	padding-left: 58px;
 	color: $h1-color;
 	text-shadow: 0 0 1px currentColor;
+	box-shadow: 0 2px 15px rgba(#000, 0.3);
 	transition:
 		background-color $transition-s,
+		box-shadow $transition-s,
 		transform $transition-s;
 
 	@include btn-more_decor;
