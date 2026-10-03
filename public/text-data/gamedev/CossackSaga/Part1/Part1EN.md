@@ -84,4 +84,4 @@ No known religion or historical figure participated in the creation of this cons
 
 *Under Construction …*
 
-Looking for accomplices and resources to make it happen. If you have the drive or know how to scale this — reach out.
+Looking for accomplices and resources to make it happen. If you know how to bring this to life — reach out.

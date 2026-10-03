@@ -90,4 +90,4 @@ Improvisation and Tarantino-esque dialogues are the foundation of each character
 
 *Under Construction …*
 
-Looking for accomplices and resources to make it happen. If you have the drive or know how to scale this — reach out.
+Looking for accomplices and resources to make it happen. If you know how to bring this to life — reach out.
