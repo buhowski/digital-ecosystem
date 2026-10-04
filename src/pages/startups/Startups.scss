@@ -355,6 +355,7 @@
 		border: 1px solid rgba($link-color, 0.4);
 		background-color: rgba(#000000, 0.5);
 		overflow: hidden;
+		box-shadow: 0 2px 15px rgba(#000, 0.3);
 		transition: $transition-s;
 
 		@include desktop-hover {
