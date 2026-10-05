@@ -99,10 +99,6 @@ const Header = () => {
 		<>
 			<header className={`header ${menuOpen ? ' header-overflow' : ''}`}>
 				<div className='wrapper'>
-					<a rel='me' href='https://mastodon.social/@buhowski'>
-						Mastodon
-					</a>
-
 					{tabletQuery ? (
 						<>
 							<LogoNavLink />
