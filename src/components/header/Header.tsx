@@ -113,7 +113,9 @@ const Header = () => {
 						<>
 							<nav className='header-nav header-nav--desktop'>
 								<LogoNavLink />
-
+								<a rel='me' href='https://mastodon.social/@buhowski' style={{ display: 'none' }}>
+									Mastodon
+								</a>
 								<ul className='header-nav__list'>{navLinkItems}</ul>
 							</nav>
 						</>
