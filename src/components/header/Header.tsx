@@ -102,7 +102,9 @@ const Header = () => {
 					{tabletQuery ? (
 						<>
 							<LogoNavLink />
-
+							<a rel='me' href='https://mastodon.social/@buhowski'>
+								Mastodon
+							</a>
 							<div className='mobile-menu-btn' onClick={toggleMenu}>
 								{Array.from({ length: 6 }).map((_, i) => (
 									<span key={i} />
