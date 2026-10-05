@@ -50,4 +50,4 @@ From the very beginning, the characters were not meant to be together. This love
 
 *Under Construction …*
 
-Looking for accomplices and resources to make it happen. If you know how to bring this to life — reach out.
+Looking for accomplices and resources. If you would like to join or have ideas on how to bring this to life — reach out. Let's colonize this reality together.

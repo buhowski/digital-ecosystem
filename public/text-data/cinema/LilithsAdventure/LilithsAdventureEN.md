@@ -97,4 +97,4 @@ The plot transforms into a continuous chase, full of new challenges. The heroes 
 
 *Under Construction …*
 
-Looking for accomplices and resources to make it happen. If you know how to bring this to life — reach out.
+Looking for accomplices and resources. If you would like to join or have ideas on how to bring this to life — reach out. Let's colonize this reality together.

@@ -6,7 +6,7 @@ Dark humor, aesthetics of absurdity, sharp satire, taboo subjects, intellectual 
 
 Looking for creators-accomplices to change the rules of the game.
 
-Everything realized can be used on your own channels.
+Everything realized can be used on your own platforms.
 
 ### List
 
