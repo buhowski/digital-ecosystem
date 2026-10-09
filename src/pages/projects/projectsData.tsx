@@ -18,7 +18,7 @@ const projectsData = [
 		name: 'Digital Ecosystem',
 		year: '2026',
 		description:
-			'100% Lighthouse score achieved. Multilingual PWA architecture. Full-cycle startup ecosystem (Founder).',
+			'100% Lighthouse score achieved. Multilingual PWA architecture. Full-cycle startup ecosystem.',
 		skills: [
 			'React',
 			'TypeScript',
